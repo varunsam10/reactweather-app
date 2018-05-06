@@ -18,7 +18,7 @@ class App extends Component {
     e.preventDefault();  //Prevents the full refresh of the Site 
     const city = e.target.elements.City.value;           //Binding the value which we enter in the text box
     const country = e.target.elements.Country.value;     //Binding the value which we enter in the text box
-    const api_call = await fetch (`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&mode=json&appid=${API_KEY}&units=metric`);
+    const api_call = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&mode=json&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();  //CONVERSTION OF DATA INTO READABLE JSON FORMAT
 
    if (city && country){
